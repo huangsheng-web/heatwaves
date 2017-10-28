@@ -1,0 +1,117 @@
+<!DOCTYPE html">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>后台管理</title>
+		<link rel="stylesheet" type="text/css" href="/css/select.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+		<style type="text/css">
+			.top{
+				width: 100%;
+				height: 88px;
+			}
+			.right{
+				width: 86%;
+				float: left;
+			}
+			.rightList>li{
+				display: none;
+			}
+			.rightList .active{
+				display: list-item;
+			}
+		</style>
+		<script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+			<% include components/top-left.ejs %>
+			<div class="right">
+		 	 <ul class="rightList">
+		 		 <li class="active">
+		 			 <div>
+		 				 <div class="place">
+		 				 </div>
+		 				 <div class="rightinfo">
+		 					<div class="tools">
+		 					 <ul class="toolbar">
+		 						<li class="click"><span><img src="/images/t01.png" /></span>添加</li>
+		 					 </ul>
+		 					</div>
+		 					<table class="tablelist">
+		 					 <thead>
+
+		 						<tr>
+		 						 <th><input name="" type="checkbox" value="" checked="checked" /></th>
+		 						 <th>编号</th>
+		 						 <th>描述</th>
+		 						 <th>分类名</th>
+		 						 <th>操作</th>
+		 						</tr>
+
+		 					 </thead>
+		 					 <tbody>
+								<%for(var i=0;i<data.length;i++){%>
+		 						<tr>
+		 						 <td><input name="" type="checkbox" value="" /></td>
+		 						 <td><%=data[i].ID%></td>
+		 						 <td class="b-title"><%=data[i].description%></td>
+		 						 <td class="description"><%=data[i].category%></td>
+		 						 <td><a href="#" class="tablelink">修改</a> <a href="#" class="tablelink"> 删除</a></td>
+		 						</tr>
+								<%}%>
+		 					 </tbody>
+		 					</table>
+		 		 </li>
+		 	 </ul>
+		 	 <div class="tip">
+		 			 <div class="formbody">
+		 			 <div class="formtitle"><span>基本信息</span></div>
+		 			 <ul class="forminfo">
+						 <li><label>描述</label><input name="" type="text" class="dfinput" /></li>
+			 			 <li><label>分类名</label><textarea name="" cols="" rows="" class="textinput"></textarea></li>
+		 			 <li><label>&nbsp;</label><input name="" type="button" class="btn" value="确认保存"/><input type="button" value="取消" class="cancelBtn"></input></li>
+		 			 </ul>
+		 		 </div>
+		 	 </div>
+		  </div>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				var index = 0;
+				$(".cancelBtn").click(function(){
+					$(".tip").fadeOut(200);
+				});
+				for(var i=0;i<$('.tablelink').length;i++){
+					$('.tablelink').eq(i).attr('index',i);
+					$('.tablelink').eq(i).click(function(){
+						index = $(this).attr('index');
+						$(".tip").fadeIn(200);
+						$('.dfinput').val($('.b-title').eq(index).text());
+						$('.textinput').text($('.description').eq(index).text());
+						$(".btn").click(function(){
+							$(".tip").fadeOut(200);
+							$.ajax({
+								type:'post',
+								url:'/admin/puzzled',
+								data:{
+									id:index,
+									title:$('.dfinput').val(),
+									description:$('.textinput').val()
+								}
+							})
+						});
+					})
+				}
+			});
+			//管理列表切换
+			$(function(){
+				for(var i=0;i<$('.menusonList').length;i++){
+					$('.menusonList').eq(i).attr('item',i)
+					$('.menusonList').eq(i).click(function(){
+						$(this).addClass('active').siblings().removeClass('active');
+
+					})
+				}
+			})
+	</script>
+	</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>热浪资本-为当代精英提供卓越的财富管理服务</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<style media="screen">
+		.wPhone,.wCode{
+			text-align: center;
+			color: red;
+			font-size: 14px;
+			}
+		</style>
+	</head>
+	<body style="">
+		<header class="g-header">
+			<div class="l-container clearfix" id="header-nav" style="display: block;">
+				<a href="javascript:;" class="logo l-left">
+					<img src="images/1505273841.png">
+				</a>
+				<nav class="g-nav l-right g-vue-container g-show-transition">
+					<a class="g-nav-link yellow" id="g-login" href="/login">请登录</a>
+				</nav>
+			</div>
+		</header>
+		<div class="g-container" id="info_form_p" style="display: block;">
+		<div class="l-980-container info-form">
+			<div class="g-sec-tit">请选择您的投资身份 <input type="radio" name="person" id="person" value=""/><label for="person">个人</label><input type="radio" name="person" id="company" value=""/><label for="company">公司</label></div>
+			<p>风险提示：私募基金投资需承担各类风险，本金可能遭受损失。同时，私募基金投资还要考虑市场风险、信用风险、流动性风险、操作风险等各类投资风险。您在基金认购过程中应当注意核对自己的风险识别和风险承受能力，选择与自己风险识别能力和风险承受能力相匹配的私募基金。</p>
+			<p>以下一系列问题可在您选择合适的私募基金前，协助评估您的风险承受能力、理财方式及投资目标。</p>
+			<div class="quick-questions clearfix">
+				<div class="question">
+					<div class="q">
+						1.&nbsp;&nbsp;请承诺您是为自己购买私募基金产品：
+					</div>
+				</div>
+				<div class="answers">
+					<label class="clearfix">
+						<input type="radio" name="q1" value="是">
+						<span class="input-text">是（我是为自己购买私募基金产品）</span></label>
+					<label class="clearfix">
+						<input type="radio" name="q1" value="否">
+						<span class="input-text">否</span></label>
+				</div>
+				<div class="question">
+					<div class="q">
+						2.&nbsp;&nbsp;请确认您符合以下何种合格投资者财务条件：
+
+					</div>
+				</div>
+				<div class="answers">
+					<label class="clearfix">
+						<input type="radio" name="q2" value="是">
+						<span class="input-text">符合金融资产不低于300万元（金融资产包括银行存款、股票、债券、基金份额、资产管理计划、银行理财产品、信托计划、保险产品、期货权益等）</span></label>
+					<label class="clearfix">
+						<input type="radio" name="q2" value="否">
+						<span class="input-text">符合最近三年个人年均收入不低于90万元</span></label>
+				</div>
+			</div>
+			<div class="g-sec-tit">为方便服务人员能与您联络，请详细填写以下内容：</div>
+			<form class="" action="/reg" method="post">
+
+			<div class="g-form-area clearfix">
+				<div class="clearfix">
+					<div class="g-form-field">
+						<div class="g-form-ipt-holder">
+							<div class="m-intro" style="color: rgb(144, 144, 144); display: none;">姓名</div>
+							<input type="text" class="g-form-ipt" id="name" name="chinesename" AUTOCOMPLETE="off" maxlength="30" value="" placeholder="请填写您的真实姓名">
+						</div>
+						<div class="g-form-ipt-error"></div>
+					</div>
+					<div class="g-form-field">
+						<div class="g-form-ipt-holder">
+							<div class="m-intro" style="display: none; color: rgb(144, 144, 144);">身份证号</div>
+							<input type="text" id="personId" name="personID" class="g-form-ipt" maxlength="18" value="" AUTOCOMPLETE="off" placeholder="请填写您的身份证号"><div class="wCode"></div>
+						</div>
+						<div class="g-form-ipt-error"></div>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="g-form-field">
+						<div class="g-form-ipt-holder">
+							<div class="m-intro" style="color: rgb(144, 144, 144); display: none;">手机号</div>
+							<input type="tel" id="phone" name="phone" class="g-form-ipt" maxlength="11" value="" AUTOCOMPLETE="off" placeholder="请填写您的常用手机号"><div class="wPhone"></div>
+						</div>
+						<div class="g-form-ipt-error"></div>
+					</div>
+					<!-- <div class="g-form-field form-label"><span class="label">图形验证码</span>
+						<div class="g-form-ipt-holder input-Img">
+							<input type="text" class="g-form-ipt g-form-ipt-s form-input input-captcha" placeholder="请输入图形验证码" maxlength="4">
+							<input type="hidden" name="_captcha_code" value="b49b87b547ba3e017c78539d27518507">
+						</div>
+							<div class="g-img-code"><img class="g-captcha" al="验证码" title="点击图片刷新验证码" style="cursor: pointer; vertical-align: middle;" src=""></div>
+							<div class="g-form-ipt-error"></div>
+					</div> -->
+					<div class="g-form-field form-label">
+						<div class="g-form-ipt-holder input-Img">
+							<input type="password" id="pass" name="password" class="g-form-ipt g-form-ipt-s form-input" maxlength="6" placeholder="请输入密码">
+						</div>
+					</div>
+				</div>
+				<div class="g-form-field form-label">
+					<span class="label w3">验证码</span>
+					<div class="g-form-ipt-holder input-Img">
+						<input type="text" class="g-form-ipt g-form-ipt-s form-input" maxlength="6" placeholder="请输入验证码" readonly="readonly">
+					</div>
+					<a class="g-btn g-btn-code g-btn-disabled">获取验证码</a>
+				</div>
+			<div class="g-submit-error"></div>
+			<input class="g-btn g-btn-large-yellow" id="submit" type="submit" value="提交信息">
+		</div>
+
+	</form>
+	</div>
+	<script src="js/jquery.js" charset="utf-8"></script>
+	<script type="text/javascript">
+	var isOk = false;
+	//身份证校验
+		function IdentityCodeValid(code) {
+					var city={11:"北京",12:"天津",13:"河北",14:"山西",15:"内蒙古",21:"辽宁",22:"吉林",23:"黑龙江 ",31:"上海",32:"江苏",33:"浙江",34:"安徽",35:"福建",36:"江西",37:"山东",41:"河南",42:"湖北 ",43:"湖南",44:"广东",45:"广西",46:"海南",50:"重庆",51:"四川",52:"贵州",53:"云南",54:"西藏 ",61:"陕西",62:"甘肃",63:"青海",64:"宁夏",65:"新疆",71:"台湾",81:"香港",82:"澳门",91:"国外 "};
+					var tip = "";
+					var pass= true;
+
+					if(!code || !/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[12])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i.test(code)){
+							tip = "身份证号格式错误";
+							pass = false;
+					}
+
+				 else if(!city[code.substr(0,2)]){
+							tip = "地址编码错误";
+							pass = false;
+					}
+					else{
+							//18位身份证需要验证最后一位校验位
+							if(code.length == 18){
+									code = code.split('');
+									//∑(ai×Wi)(mod 11)
+									//加权因子
+									var factor = [ 7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2 ];
+									//校验位
+									var parity = [ 1, 0, 'X', 9, 8, 7, 6, 5, 4, 3, 2 ];
+									var sum = 0;
+									var ai = 0;
+									var wi = 0;
+									for (var i = 0; i < 17; i++)
+									{
+											ai = code[i];
+											wi = factor[i];
+											sum += ai * wi;
+									}
+									var last = parity[sum % 11];
+									if(parity[sum % 11] != code[17]){
+											tip = "校验位错误";
+											pass =false;
+									}
+							}
+					}
+					if(!pass);
+					return pass;
+			}
+			//校验手机号
+		$('#phone').keyup(function(){
+		var curInput = $('#phone').val(),
+				Reg  = /^((\d3)|(\d{3}\-))?[13|15|18][0-9]\d{8}|15[89]\d{8}$/;
+				if(!Reg.test(curInput)||curInput.length!='11'){
+					$('.wPhone').text('您的输入的手机号码不合格');
+					isOk = false;
+				}else {
+					$('.wPhone').text('');
+					isOk = true;
+				}
+			})
+		//校验身份证
+		$('#personId').keyup(function(){
+		var curInput = $('#personId').val(),
+				isTure  = IdentityCodeValid(curInput);
+				if(!isTure){
+					$('.wCode').text('请输入有效身份证件');
+				}else {
+					$('.wCode').text('');
+					isOk = true;
+				}
+			})
+		$('#submit').click(function(){
+			if($('#name').val()==''||$('#personId').val() ==''||$('#phone').val()==''||$('#pass').val()==''){
+				return false;
+			}else if (!isOk) {
+				return false
+			}
+		})
+	</script>
+</body>
+</html>

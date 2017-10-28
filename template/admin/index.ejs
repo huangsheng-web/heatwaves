@@ -1,0 +1,155 @@
+<!DOCTYPE html">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>后台管理</title>
+		<link rel="stylesheet" type="text/css" href="/css/select.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+		<style type="text/css">
+			.top{
+				width: 100%;
+				height: 88px;
+			}
+			.right{
+				width: 86%;
+				float: left;
+			}
+			.rightList>li{
+				display: none;
+			}
+			.rightList .active{
+				display: list-item;
+			}
+		</style>
+		<script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+			<% include components/top-left.ejs %>
+			<div class="right">
+		 	 <ul class="rightList">
+		 		 <li class="active">
+		 			 <div>
+		 				 <div class="place">
+		 				 </div>
+		 				 <div class="rightinfo">
+		 					<div class="tools">
+		 					 <ul class="toolbar">
+		 						<li class="click"><span><img src="/images/t01.png" /></span>添加</li>
+		 					 </ul>
+		 					</div>
+		 					<table class="tablelist">
+		 					 <thead>
+		 						<tr>
+		 						 <th><input name="" type="checkbox" value="" checked="checked" /></th>
+		 						 <th>编号</th>
+		 						 <th>标题</th>
+		 						 <th>用户</th>
+		 						 <th>籍贯</th>
+		 						 <th>发布时间</th>
+		 						 <th>是否审核</th>
+		 						 <th>操作</th>
+		 						</tr>
+		 					 </thead>
+		 					 <tbody>
+		 						<tr>
+		 						 <td><input name="" type="checkbox" value="" /></td>
+		 						 <td>20130908</td>
+		 						 <td>王金平幕僚：马英九声明字字见血 人活着没意思</td>
+		 						 <td>admin</td>
+		 						 <td>江苏南京</td>
+		 						 <td>2013-09-09 15:05</td>
+		 						 <td>已审核</td>
+		 						 <td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink"> 删除</a></td>
+		 						</tr>
+		 					 </tbody>
+		 					</table>
+		 					<div class="pagin">
+		 					 <div class="message">
+		 						共
+		 						<i class="blue">1256</i>条记录，当前显示第&nbsp;
+		 						<i class="blue">2&nbsp;</i>页
+		 					 </div>
+		 					 <ul class="paginList">
+		 						<li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
+		 						<li class="paginItem"><a href="javascript:;">1</a></li>
+		 						<li class="paginItem current"><a href="javascript:;">2</a></li>
+		 						<li class="paginItem"><a href="javascript:;">3</a></li>
+		 						<li class="paginItem"><a href="javascript:;">4</a></li>
+		 						<li class="paginItem"><a href="javascript:;">5</a></li>
+		 						<li class="paginItem more"><a href="javascript:;">...</a></li>
+		 						<li class="paginItem"><a href="javascript:;">10</a></li>
+		 						<li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
+		 					 </ul>
+		 					</div>
+		 				 </div>
+		 				</div>
+		 		 </li>
+		 		 <li>
+		 			 <div class="rightinfo">
+		 				 <ul class="imglist">
+		 					 <li class="selected">
+		 						 <span><img src="/images/img01.png" /></span>
+		 						 <h2><a href="#">软件界面设计下载</a></h2>
+		 						 <p><a class="edit" href="#">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="delete" onclick="return confirm('您确定要删除吗？')" href="./data">删除</a></p>
+		 					 </li>
+		 				 </ul>
+		 				 <div class="pagin">
+		 					 <div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
+		 						 <ul class="paginList">
+		 						 <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
+		 						 <li class="paginItem"><a href="javascript:;">1</a></li>
+		 						 <li class="paginItem current"><a href="javascript:;">2</a></li>
+		 						 <li class="paginItem"><a href="javascript:;">3</a></li>
+		 						 <li class="paginItem"><a href="javascript:;">4</a></li>
+		 						 <li class="paginItem"><a href="javascript:;">5</a></li>
+		 						 <li class="paginItem more"><a href="javascript:;">...</a></li>
+		 						 <li class="paginItem"><a href="javascript:;">10</a></li>
+		 						 <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
+		 						 </ul>
+		 				 </div>
+		 			 </div>
+		 		 </li>
+		 	 </ul>
+		 	 <div class="tip">
+		 			 <div class="formbody">
+		 			 <div class="formtitle"><span>基本信息</span></div>
+		 			 <ul class="forminfo">
+		 			 <li><label>文章标题</label><input name="" type="text" class="dfinput" /><i>标题不能超过30个字符</i></li>
+		 			 <li><label>关键字</label><input name="" type="text" class="dfinput" /><i>多个关键字用,隔开</i></li>
+		 			 <li><label>是否审核</label><cite><input name="" type="radio" value="" checked="checked" />是&nbsp;&nbsp;&nbsp;&nbsp;<input name="" type="radio" value="" />否</cite></li>
+		 			 <li><label>引用地址</label><input name="" type="text" class="dfinput" value="" /></li>
+		 			 <li><label>文章内容</label><textarea name="" cols="" rows="" class="textinput"></textarea></li>
+		 			 <li><label>&nbsp;</label><input name="" type="button" class="btn" value="确认保存"/><input type="button" value="取消" class="cancelBtn"></input></li>
+		 			 </ul>
+		 		 </div>
+		 	 </div>
+		  </div>
+	<script type="text/javascript">
+			$(document).ready(function(){
+			  $(".click").click(function(){
+			 	 $(".tip").fadeIn(200);
+			  });
+			  $('.edit').click(function(){
+			  	 $(".tip").fadeIn(200);
+			  })
+			  $(".btn").click(function(){
+			  	$(".tip").fadeOut(200);
+				});
+ 				$(".cancelBtn").click(function(){
+			  	$(".tip").fadeOut(200);
+				});
+
+			});
+			//管理列表切换
+			$(function(){
+				for(var i=0;i<$('.menusonList').length;i++){
+					$('.menusonList').eq(i).attr('item',i)
+					$('.menusonList').eq(i).click(function(){
+						$(this).addClass('active').siblings().removeClass('active');
+
+					})
+				}
+			})
+	</script>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://toweringcapital.cn/login -->
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>登录</title>
+		<meta name="keywords" content="私募基金,高净值">
+		<meta name="description" content="">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="/css/base_v2.css">
+	</head>
+<body>
+<style>
+</style>
+<header class="g-header">
+	<div class="l-container clearfix" id="header-nav">
+		<a href="javascript:;" class="logo l-left">
+			<img src="/images/1505273841.png">
+		</a>
+
+	</div>
+</header>
+<div class="module_password">
+	<a href="javascript:;" class="password_left"></a>
+	<div class="password_main">
+		<div class="password_method">
+			<div class="module_title">登录
+			</div>
+			<form class="" action="/login" method="post">
+
+
+				<div class="password_input">
+					<input type="tel" maxlength="18"name="username" id="username" placeholder="请输入手机号/身份证">
+					<div class="password_input_close iconfont" style="visibility: hidden;">
+
+					</div>
+				</div>
+				<div class="password_input">
+					<input type="password" maxlength="50"name="password" id="password" placeholder="请输入密码">
+					<div class="password_input_close iconfont" style="visibility: hidden;">
+
+					</div>
+				</div>
+				<div class="password_error" style="visibility: hidden;">
+					<em class="iconfont" style="display: none;"></em>
+					<span></span>
+				</div>
+				<div class="password_operation">
+					<input class="g_btn g_btn--small g_btn--yellow g_left" type="submit" id="login" value="登录">
+					<div class="g_right password_link">
+						<em class="line--vertcal">|</em>未注册，
+						<a href="/reg">立即注册</a>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+</div>
+<script src="/js/jquery.js" charset="utf-8"></script>
+<!-- <script type="text/javascript">
+	$('#login').click(function(){
+		$.ajax({
+			type:'post',
+			url:'/web/login',
+			data:{
+				username : $('#username').val(),
+				password : $('#password').val()
+			}
+		})
+	})
+</script> -->
+</body>
+</html>
